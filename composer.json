@@ -1,0 +1,28 @@
+{
+    "name": "joaocarvalho/ci-testing",
+    "description": "Testando CircleCI",
+    "type": "project",
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+        "humanmade/coding-standards": "^1.2",
+        "phpcompatibility/phpcompatibility-wp": "*",
+        "automattic/vipwpcs": "*",
+        "sirbrillig/phpcs-variable-analysis": "^2.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Joaocarvalho\\CiTesting\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "João Carvalho",
+            "email": "jovtrc@gmail.com"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}

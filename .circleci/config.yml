@@ -15,3 +15,11 @@ jobs:
           command: | 
             php --version
             node --version
+      - run:
+          name: "Roda Composer Install"
+          command: |
+            composer install
+      - run:
+          name: "Roda PHPCS"
+          command: |
+            ./vendor/bin/phpcs
