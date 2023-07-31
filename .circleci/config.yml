@@ -11,6 +11,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Exibe versões do PHP e Node"
+          name: "Exibe versões do PHP"
           command: "php --version"
+      - run:
+          name: "Exibe versões do Node"
           command: "node --version"
