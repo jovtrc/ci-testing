@@ -26,7 +26,7 @@ jobs:
       - run:
           name: "Roda NPM Install"
           command: |
-            npm install
+            npm install --force
       - run:
           name: "Roda JS Lint"
           command: |
@@ -48,7 +48,7 @@ jobs:
       - run:
           name: "Roda NPM Install"
           command: |
-            npm install
+            npm install --force
       - run:
           name: "Compila arquivos"
           command: |
