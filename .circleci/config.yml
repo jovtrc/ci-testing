@@ -67,6 +67,8 @@ workflows:
               only:
                 - main
       - run-build:
+          requires:
+            - run-lint
           filters:
             branches:
               only:
