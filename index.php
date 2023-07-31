@@ -16,7 +16,7 @@ require 'vendor/autoload.php';
 
 
 function myTest($abc) {
-	if("xyz" == $abc) {
+	if ( 'xyz' == $abc ) {
 		echo "XYZ";
 	} else {
 		echo $abc;
