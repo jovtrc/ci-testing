@@ -54,15 +54,6 @@ jobs:
           command: |
             npm run build
 
-      # Add the generated files to git
-      - run: git config user.email "jovtrc@gmail.com"
-      - run: git config user.name "João Carvalho - CircleCI"
-      - run: git add .
-      - run: git commit -m "Adiciona arquivos gerados no build pelo CircleCI"
-
-      # Push the changes to the branch
-      - run: git push origin main-built
-
 
 workflows:
   lint-files:
