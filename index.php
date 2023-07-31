@@ -15,10 +15,10 @@
 require 'vendor/autoload.php';
 
 
-function myTest($abc) {
-	if("xyz" == $abc) {
-		echo "XYZ";
+function myTest( $abc ) {
+	if ( 'xyz' == $abc ) {
+		echo 'xyz';
 	} else {
-		echo $abc;
+		echo esc_html( $abc );
 	}
 }
