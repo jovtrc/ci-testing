@@ -18,6 +18,7 @@ require 'vendor/autoload.php';
 function myTest( $abc ) {
 	if ( 'xyz' == $abc ) {
 		echo 'XYZ';
+		echo 'ABC';
 	} else {
 		echo esc_html( $abc );
 	}
