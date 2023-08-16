@@ -12,6 +12,7 @@
  * @since 1.0
  */
 
+// Adicionando um comentário para teste
 require 'vendor/autoload.php';
 
 
