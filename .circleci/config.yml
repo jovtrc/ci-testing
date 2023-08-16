@@ -5,7 +5,7 @@ version: 2.1
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
-  build:
+  run-lint:
     docker:
       - image: cimg/php:8.1.21-node
     steps:
@@ -23,3 +23,53 @@ jobs:
           name: "Roda PHPCS"
           command: |
             ./vendor/bin/phpcs
+      - run:
+          name: "Roda NPM Install"
+          command: |
+            npm install --force
+      - run:
+          name: "Roda JS Lint"
+          command: |
+            npm run lint
+  run-build:
+    docker:
+      - image: cimg/php:8.1.21-node
+    steps:
+      - checkout
+      - run:
+          name: "Exibe versões do PHP e Node"
+          command: | 
+            php --version
+            node --version
+      - run:
+          name: "Roda Composer Install"
+          command: |
+            composer install
+      - run:
+          name: "Roda NPM Install"
+          command: |
+            npm install --force
+      - run:
+          name: "Compila arquivos"
+          command: |
+            npm run build
+
+
+workflows:
+  lint-files:
+    jobs:
+      - run-lint
+  build-files:
+    jobs:
+      - run-lint:
+          filters:
+            branches:
+              only:
+                - main
+      - run-build:
+          requires:
+            - run-lint
+          filters:
+            branches:
+              only:
+                - main
