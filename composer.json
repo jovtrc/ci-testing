@@ -21,6 +21,9 @@
   "scripts": {
     "phpcs": [
       "phpcs"
+    ],
+    "phpcbf": [
+      "./client-mu-plugins/vendor/squizlabs/php_codesniffer/bin/phpcbf"
     ]
   }
 }
