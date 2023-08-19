@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run:
           name: "Exibe versões do PHP e Node"
-          command: | 
+          command: |
             php --version
             node --version
       - run:
@@ -22,7 +22,7 @@ jobs:
       - run:
           name: "Roda PHPCS"
           command: |
-            ./vendor/bin/phpcs
+            composer run-script phpcs
       - run:
           name: "Roda NPM Install"
           command: |
@@ -38,7 +38,7 @@ jobs:
       - checkout
       - run:
           name: "Exibe versões do PHP e Node"
-          command: | 
+          command: |
             php --version
             node --version
       - run:
