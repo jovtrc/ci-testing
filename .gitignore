@@ -48,6 +48,7 @@ dist-ssr
 
 # Composer (repo root only)
 /vendor/
+client-mu-plugins/vendor/
 
 # Logs
 logs
